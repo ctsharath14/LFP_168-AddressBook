@@ -22,10 +22,10 @@ public class AddressBook {
         System.out.println(contacts);
     }
     //editing contact based on person name
-    public void editContact(){
-        System.out.println("Enter the first name to edit");
+    public void editContact() {
+        System.out.println("Enter the first name to edit the contact");
         String firstName = scanner.nextLine();
-        if(firstName.equalsIgnoreCase(contacts.getFirstName())){
+        if (firstName.equalsIgnoreCase(contacts.getFirstName())) {
             System.out.println("Enter the first name");
             contacts.setFirstName(scanner.nextLine());
             System.out.println("enter the last name");
@@ -41,9 +41,21 @@ public class AddressBook {
             System.out.println("enter the phone number");
             contacts.setPhoneNumber(scanner.nextLine());
             System.out.println(contacts);
+        } else {
+            System.out.println("contact is not found");
+        }
+    }
+    //Deleting the contact based on firstName
+    public void deleteContact(){
+        System.out.println("enter the first name to delete the contact");
+        String firstName = scanner.nextLine();
+        if(firstName.equalsIgnoreCase(contacts.getFirstName())){
+            System.out.println("deleting the contact list as first name matched ");
+            contacts = null;
+
         }
         else {
-            System.out.println("contact is not found");
+            System.out.println("contact not deleted as first name not matched ");
         }
     }
 }
