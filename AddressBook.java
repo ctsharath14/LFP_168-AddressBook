@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class AddressBook {
     Contacts contacts = new Contacts();
