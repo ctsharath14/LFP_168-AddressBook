@@ -7,7 +7,7 @@ public class Contacts {
     private String email;
     private String phoneNumber;
 
-    //geter method
+    //getter method
     public String getFirstName() {
         return firstName;
     }
